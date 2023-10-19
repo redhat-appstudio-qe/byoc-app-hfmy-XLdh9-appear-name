@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: chud
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-wyij-tenant/byoc-app-hfmy/chud@sha256:82df9d3ed8db458a371dd4ac35f8a13e25a8485c637d9f1dfb395504598d25be
+        name: my-java-quarkus
+        resources: {}
+status: {}

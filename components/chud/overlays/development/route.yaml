@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: chud
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: chud
+    app.kubernetes.io/part-of: byoc-app-hfmy
+  name: chudbn2h
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: chud
+    weight: null
+status: {}
